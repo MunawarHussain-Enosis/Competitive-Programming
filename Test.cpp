@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 #define ll long long int
 #define LL long long int
 #define ULL unsigned long long int

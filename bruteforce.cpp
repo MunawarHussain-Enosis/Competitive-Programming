@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 #define ll long long int
 #define LL long long int
 #define ULL unsigned long long int
@@ -27,26 +27,9 @@ using namespace std;
 #define mMax 20005
 #define nMax 2505
 #define SZ(a) a.size()
-vector<vi> adj;
-vector<vi> cost;
-int deg[1000];
-struct node{
-  int left,right;
-  int val;
-} Tree[300010];
-int a;
-void dfs(int u,int p=0,int d=0)
-{
-    if(u==a) return;
-    dfs(u+1,u,d+1);
-}
+
 int main()
 {
-    #ifdef shakil
-       // freopen("input.txt","r",stdin);
-    //freopen("output.txt","w",stdout);
-    #endif
-    a=50000;
-    dfs(1);
+    
     return 0;
 }
