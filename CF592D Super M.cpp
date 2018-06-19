@@ -44,7 +44,29 @@ void dfs(int u,int par){
 	return;
 }
 
+void dfs1(int u,int par){
+	dp[0][u] = 0;
+	for(auto v:edges[u]){
+		if(v==par) continue;
+		dfs1(v,u);
+		if(marked[v]>0){
+			dp[0][u] += 2 + dp[0][v];
+		}
+	}
+	return;
+}
 
+void dfs2(int u,int par){ // should remember endpoints
+	dp[1][u] = dp[0][u];
+	for(auto v:edges[u]){
+		if(v==par) continue;
+		dfs2(v,u);
+		if(marked[v]>0){
+			dp[1][u] =min(dp[1][u], dp[0][u]-dp[0][v] -1 + dp[1][v]);
+		}
+	}
+	return;
+}
 
 int main()
 {
